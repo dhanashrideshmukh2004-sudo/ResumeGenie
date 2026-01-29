@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Payment - Resume Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .mean {
+        background: linear-gradient(135deg, #0070ba, #003087);
+        max-width: 1200px;
+        margin: 25px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .container h2 {
+        color: #ffb347;
+        text-decoration: underline;
+        font-size: 32px;
+        margin: 0;
+    }
+
+    .container img {
+        max-width: 100%;
+        height: auto;
+        max-height: 100px;
+    }
+
+    .text-section h3 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .image-section img {
+        max-width: 100%;
+        height: auto;
+        max-height: 250px;
+    }
+
+    .get-btn {
+        background-color: #ff6b35;
+        color: white;
+        padding: 15px 30px;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: 20px auto;
+        max-width: 200px;
+    }
+
+    .get-btn:hover {
+        background-color: #e55a2b;
+    }
+
+    @media (max-width: 768px) {
+        .mean {
+            margin: 15px;
+            padding: 15px;
+        }
+
+        .container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .text-section h3 {
+            font-size: 16px;
+        }
+
+        .image-section img {
+            max-height: 200px;
+            margin-top: 20px;
+        }
+
+        .get-btn {
+            padding: 12px 20px;
+        }
+    }
+</style>
+
+<body>
+    <div class="mean">
+        <div class="container">
+            <h2>WE ACCEPT</h2>
+            <img src="https://www.pngplay.com/wp-content/uploads/12/PayPal-No-Background-Clip-Art.png" alt="PayPal Logo">
+        </div>
+        <div class="container">
+            <div class="text-section">
+                <h3>A feature-packed resume builder that makes resume creation a breeze.<br><br>
+                    Create a visually stunning resume with our resume builder. It will guide you through the process. We help with content suggestions and choosing the right design and layout, while you focus on presenting yourself.</h3>
+            </div>
+            <div class="image-section">
+                <img src="https://www.livecareer.com/lcapp/uploads/2025/05/home-hero-banner-animation-desk.png" alt="Resume Builder Illustration">
+            </div>
+        </div>
+        <div class="get-btn" id="get-btn">GET PLAN</div>
+    </div>
+
+    <script>
+        document.getElementById('get-btn').addEventListener('click', function() {
+            window.location.href = 'plans.html';
+        });
+    </script>
+</body>
+
+</html>

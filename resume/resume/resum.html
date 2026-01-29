@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Resume Builder</title>
+  <link rel="stylesheet" href="resum.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ================= TEMPLATE SELECTION ================= -->
+<section id="templateSelect" class="page active">
+  <h2>Select Your Resume Template</h2>
+  <button id="viewMore">View More Templates</button>
+  <div id="templateGrid" class="hidden">
+    <div class="template" data-name="Modern">Modern</div>
+    <div class="template" data-name="Classic">Classic</div>
+    <div class="template" data-name="Minimal">Minimal</div>
+    <div class="template" data-name="Creative">Creative</div>
+    <div class="template" data-name="Professional">Professional</div>
+    <div class="template" data-name="Elegant">Elegant</div>
+  </div>
+</section>
+
+<!-- ================= HEADER / PERSONAL INFO ================= -->
+<section id="headerInfo" class="page">
+  <h2>Personal Information</h2>
+  <input type="text" id="fullName" placeholder="Full Name">
+  <input type="email" id="email" placeholder="Email">
+  <input type="text" id="phone" placeholder="Phone Number">
+  <div class="btns">
+    <button class="nextBtn" data-next="experience">Continue</button>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="page">
+  <h2>Work Experience</h2>
+  <input type="text" id="company" placeholder="Company Name">
+  <input type="text" id="role" placeholder="Job Title">
+  <input type="text" id="duration" placeholder="Duration (e.g. 2021–2023)">
+  <div class="btns">
+    <button class="backBtn" data-back="headerInfo">Back</button>
+    <button class="nextBtn" data-next="education">Continue</button>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="page">
+  <h2>Education</h2>
+  <input type="text" id="college" placeholder="College/University">
+  <input type="text" id="degree" placeholder="Degree">
+  <input type="text" id="year" placeholder="Passing Year">
+  <div class="btns">
+    <button class="backBtn" data-back="experience">Back</button>
+    <button class="nextBtn" data-next="skills">Continue</button>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="page">
+  <h2>Skills</h2>
+  <input type="text" id="skill1" placeholder="Skill 1">
+  <input type="text" id="skill2" placeholder="Skill 2">
+  <input type="text" id="skill3" placeholder="Skill 3">
+  <div class="btns">
+    <button class="backBtn" data-back="education">Back</button>
+    <button class="nextBtn" data-next="summary">Continue</button>
+  </div>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section id="summary" class="page">
+  <h2>Professional Summary</h2>
+  <textarea id="summaryText" placeholder="Write a short summary about yourself..."></textarea>
+  <div class="btns">
+    <button class="backBtn" data-back="skills">Back</button>
+    <button class="nextBtn" data-next="finalize">Continue</button>
+  </div>
+</section>
+
+<!-- ================= FINALIZE ================= -->
+<section id="finalize" class="page">
+  <h2>Finalize Your Resume</h2>
+  <p>All sections completed! 🎉</p>
+  <button id="downloadResume">Download Resume</button>
+  <button class="backBtn" data-back="summary">Back</button>
+</section>
+
+<script src="resume.js"></script>
+</body>
+</html>

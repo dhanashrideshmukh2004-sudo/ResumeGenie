@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Building Tips</title>
+</head>
+<style>
+    body{
+        background-color: rgb(209, 188, 191);
+    }
+    .container {
+        background-color: rgb(202, 197, 197);
+        padding: 40px;
+    }
+    .tips {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: aliceblue;
+        margin: 30px auto;
+        padding: 30px;
+        max-width: 800px;
+    }
+    @media (max-width: 768px) {
+        .tips {
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 10px;
+            padding: 20px;
+        }
+    }
+    #fix {
+        background-color: rgb(24, 114, 231);
+        color: white;
+        padding: 15px 60px;
+        margin: 20px auto;
+        display: block;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: rgb(158, 139, 34);">HERE ARE SOME TIPS FOR <br> HOW TO BUILD YOUR RESUME</h1>
+        <div class="tips">
+            <div> 1. CHOOSE A TEMPLATE WHICHEVER <br>&nbsp;&nbsp; YOU LIKE </div>
+            <div> <img
+                    src="https://images.ctfassets.net/pdf29us7flmy/3nfnQRZNI7ByD0tkCo2fl2/c3b7b70d7527edc51dde14d078cf6d15/Resume_format.jpg?w=720&q=100&fm=jpg"
+                    height="250px" alt="Resume template example"></div>
+        </div>
+        <div class="tips">
+            <div> <img
+                    src="https://media.istockphoto.com/id/1126653712/vector/resume-and-cv-template-design-for-man-and-woman-vector-illustration.jpg?s=170667a&w=0&k=20&c=EfVIgTpGUU64kjsGnZC172AhIwpDyqgrJWfGFJWOf3M="
+                    height="250px" alt="Resume template for man and woman"></div>
+            <div> 2. FILL THE REQUIRED INFORMATION <br>&nbsp;&nbsp; TO BUILD RESUME </div>
+        </div>
+        <div class="tips">
+            <div> 3. GET AI SUGGESTIONS TO IMPROVE OR <br>&nbsp;&nbsp; STYLE YOUR RESUME</div>
+            <div> <img src="https://hyresnap.com/_next/image?url=%2Flanding_hero.png&w=1920&q=75" height="250px" alt="AI resume suggestions tool"></div>
+        </div>
+        <div class="tips">
+            <div> <img
+                    src="https://yekdown.com/wp-content/uploads/2023/07/Neevia-Document-Converter-Pro-Logo.jpg"
+                    height="175px" alt="Document converter logo"></div>
+            <div> 4. DOWNLOAD YOUR RESUME <br>&nbsp;&nbsp; IN PDF FORMAT</div>
+        </div>
+        <div class="tips">
+            <div> 5. GET YOUR RESUME <br>&nbsp;&nbsp; IN YOUR EMAIL</div>
+            <div> <img
+                    src="https://enhancv.com/_next/static/images/resume3-fdd7e3eafb8f16ef8e0aa6f5ef523dca.webp"
+                    height="250px" alt="Resume email delivery example"></div>
+        </div>
+        <div class="tips">
+             <div> <img src="https://instaresume.io/section_1.webp" height="250px" alt="Resume Genie tool"></div>
+            <div> <h1 style="color: rgb(158, 139, 34);">RESUME <br> GENIE</h1></div>
+        </div>
+        <button id="fix"> GET STARTED </button>
+    </div>
+</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("fix").onclick = function () {
+                window.location.href = "alert";
+            };
+        });
+    </script>
+
+</html>

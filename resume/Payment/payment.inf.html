@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    h1 {
+        text-align: center;
+        color: rgb(14, 12, 12);
+        margin-bottom: 20px;
+        font-size: 16px;
+        text-decoration: underline;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .payment-section .summary-section {
+        flex: 1;
+        background-color: #f0f8ff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .card-header h2 {
+        margin: 0;
+        font-size: 1.5em;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #1872e7;
+        box-shadow: 0 0 5px rgba(24, 114, 231, 0.5);
+    }
+
+    .terms {
+        font-size: 0.9em;
+        color: #666;
+        margin: 20px 0;
+        line-height: 1.4;
+    }
+
+    .thin {
+        background-color: #1872e7;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1.1em;
+        font-weight: 500;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .thin:hover {
+        background-color: #1456a3;
+    }
+
+    .secure-checkout {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 500;
+    }
+
+    .secure-header {
+        color: rgb(78, 73, 73);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .summary h3 {
+        margin-top: 0;
+    }
+
+    .total {
+        background-color: #17a2b8;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+
+    .cancellation-info {
+        text-align: center;
+        margin: 40px auto;
+        max-width: 600px;
+        color: rgb(61, 58, 58);
+    }
+
+    .cancellation-info h3 {
+        margin-bottom: 10px;
+    }
+
+    .cancellation-info p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        .payment-section, .summary-section {
+            margin-bottom: 20px;
+        }
+
+        .thin {
+            max-width: 100%;
+        }
+
+        .cancellation-info {
+            margin: 20px 10px;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .beat {
+            margin: 100px auto;
+            max-width: 1200px;
+        }
+    }
+</style>
+
+<body>
+    <div class="beat">
+        <h1>PAYMENT INFORMATION</h1>
+        <div class="container">
+            <div class="payment-section">
+                <div class="card-header">
+                    <h2>CARD INFORMATION</h2>
+                    <img src="https://www.pngplay.com/wp-content/uploads/12/PayPal-No-Background-Clip-Art.png" alt="PayPal Logo" height="50px">
+                </div>
+                <form action="">
+                    <div class="form-group">
+                        <label for="card-number">CARD NUMBER</label>
+                        <input type="number" id="card-number" name="card number" placeholder="678032684300132235" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="security-code">SECURITY CODE</label>
+                        <input type="text" id="security-code" name="security code" placeholder="tyq235" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">NAME ON CARD</label>
+                        <input type="text" id="name" name="name" placeholder="Tejasvini Devidas Sonule" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiration">EXPIRATION DATE</label>
+                        <input type="month" id="expiration" name="expiration" required>
+                    </div>
+                </form>
+                <p class="terms">
+                    By clicking “Get Your Resume” below, you agree to be charged $295.00 (which includes unlimited edits, downloads, and emails). You also agree to our terms and policy. After 14 weeks, you will be billed $495.00 every 4 weeks until your subscription ends. You can cancel at any time.
+                </p>
+                <button class="thin" type="submit" id="get-resume-btn">GET YOUR RESUME</button>
+                <div class="secure-checkout">
+                    <img src="https://cdn-icons-png.flaticon.com/512/890/890132.png" alt="Secure Icon" height="25px">
+                    SECURE CHECKOUT
+                </div>
+            </div>
+            <div class="summary-section">
+                <h4 class="secure-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/890/890132.png" alt="Secure Icon" height="25px">
+                    SECURE CHECKOUT
+                </h4>
+                <div class="summary">
+                    <h3>SUMMARY</h3>
+                    <hr>
+                    <h3>Plan: Get My Resume + Land a Job</h3>
+                    <p>
+                        By clicking “Get Your Resume” below, you agree to be charged $295.00 (which includes unlimited edits, downloads, and emails). You also agree to our terms and policy. After 14 weeks, you will be billed $495.00 every 4 weeks until your subscription ends. You can cancel at any time.
+                    </p>
+                    <div class="total">Total Due Today: $295.00</div>
+                    <h3>*Money-Back Guarantee<br>
+                        Resume Genie offers professional guidance to create custom resumes and cover letters.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cancellation-info">
+        <h3>How Would I Cancel?</h3>
+        <p>We’d be sorry to see you go! You can cancel at any time online or by phone. If you’re not satisfied during your 14-week trial, let us know and we’ll refund your money.</p>
+    </div>
+
+    <script>
+        document.getElementById('get-resume-btn').addEventListener('click', function() {
+            window.location.href = 'build.html';
+        });
+    </script>
+</body>
+
+</html>

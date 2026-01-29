@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume Genie AI Chatbot</title>
+
+  <!-- Chatbot CSS -->
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+  <div id="chatbot">
+
+    <!-- Header -->
+    <div class="chatbot-header">
+      <span>Resume Genie AI 🤖</span>
+      <button id="closeChat">✕</button>
+    </div>
+
+    <!-- Messages -->
+    <div id="chatBox">
+      <div class="msg ai">
+        <span>
+          Hi 👋 <br>
+          I can help you with:
+          <ul>
+            <li>Resume Summary</li>
+            <li>Skills suggestions</li>
+            <li>Project descriptions</li>
+            <li>ATS-friendly tips</li>
+          </ul>
+        </span>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="chatbot-input">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Ask your resume question..."
+        autocomplete="off"
+      />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+  </div>
+
+  <!-- Chatbot JS -->
+  <script src="chatbot.js"></script>
+
+  <!-- Close chatbot -->
+  <script>
+    document.getElementById("closeChat").onclick = function () {
+      document.getElementById("chatbot").style.display = "none";
+    };
+  </script>
+
+</body>
+</html>

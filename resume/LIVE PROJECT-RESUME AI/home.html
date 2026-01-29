@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h2>AI Resume Builder</h2>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#templates" class="nav-link">Templates</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-sun" id="theme-icon"></i>
+                    </button>
+
+                    <!-- User Account Section -->
+                    <div class="user-account">
+                        <div class="user-profile" id="userProfile">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="user-info">
+                                <span class="user-name">John Doe</span>
+                                <i class="fas fa-chevron-down user-dropdown-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- User Dropdown Menu -->
+                        <div class="user-dropdown" id="userDropdown">
+                            <div class="dropdown-header">
+                                <div class="dropdown-user-info">
+                                    <div class="dropdown-avatar">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                    <div class="dropdown-user-details">
+                                        <h4>John Doe</h4>
+                                        <p>john.doe@example.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="#profile" class="dropdown-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>My Profile</span>
+                                </a>
+                                <a href="#settings" class="dropdown-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </a>
+                                <a href="#resumes" class="dropdown-item">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>My Resumes</span>
+                                </a>
+                                <a href="#templates" class="dropdown-item">
+                                    <i class="fas fa-palette"></i>
+                                    <span>Templates</span>
+                                </a>
+                                <a href="#help" class="dropdown-item">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>Help & Support</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#logout" class="dropdown-item logout-item">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Sign Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Welcome to <span class="highlight">AI Resume Builder</span>
+                    </h1>
+                    <p class="hero-description">
+                        Create professional resumes with AI-powered suggestions and beautiful templates.
+                        Build your perfect resume in minutes with our intelligent resume builder.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#builder" class="btn btn-primary">Get Started</a>
+                        <a href="#templates" class="btn btn-secondary">View Templates</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-visual">
+                        <!-- Placeholder for resume preview or illustration -->
+                        <div class="resume-preview"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
