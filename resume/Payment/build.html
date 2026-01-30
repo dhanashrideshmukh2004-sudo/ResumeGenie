@@ -83,12 +83,19 @@
         <button id="fix"> GET STARTED </button>
     </div>
 </body>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById("fix").onclick = function () {
-                window.location.href = "alert";
-            };
-        });
-    </script>
+ <script>
+const tips = document.querySelectorAll(".tips");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, { threshold: 0.2 });
+
+tips.forEach(tip => observer.observe(tip));
+</script>
+
 
 </html>

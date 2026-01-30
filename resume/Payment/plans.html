@@ -183,20 +183,37 @@
             </div>
         </div>
     </div>
+<script>
+    function handlePlanClick(planType) {
 
-    <script>
-        document.getElementById('free-btn').addEventListener('click', function() {
-            window.location.href = 'payment.inf.html';
-        });
+        const btn = document.getElementById(planType + '-btn');
 
-        document.getElementById('monthly-btn').addEventListener('click', function() {
-            window.location.href = 'payment.inf.html';
-        });
+        // Prevent double click
+        if (btn.classList.contains('disabled')) return;
 
-        document.getElementById('yearly-btn').addEventListener('click', function() {
+        btn.classList.add('disabled');
+        btn.innerText = 'PLEASE WAIT...';
+        btn.style.backgroundColor = '#999';
+        btn.style.cursor = 'not-allowed';
+
+        // Optional: store plan (future backend / payment use)
+        localStorage.setItem('selectedPlan', planType);
+
+        // Smooth redirect
+        setTimeout(() => {
             window.location.href = 'payment.inf.html';
-        });
-    </script>
+        }, 800);
+    }
+
+    document.getElementById('free-btn')
+        .addEventListener('click', () => handlePlanClick('free'));
+
+    document.getElementById('monthly-btn')
+        .addEventListener('click', () => handlePlanClick('monthly'));
+
+    document.getElementById('yearly-btn')
+        .addEventListener('click', () => handlePlanClick('yearly'));
+</script>
 </body>
 
 </html>

@@ -123,12 +123,27 @@
         </div>
         <div class="get-btn" id="get-btn">GET PLAN</div>
     </div>
+<script>
+    const getBtn = document.getElementById('get-btn');
 
-    <script>
-        document.getElementById('get-btn').addEventListener('click', function() {
-            window.location.href = 'plans.html';
-        });
-    </script>
+    getBtn.addEventListener('click', function () {
+
+        // Prevent double click
+        if (getBtn.classList.contains('disabled')) return;
+
+        getBtn.classList.add('disabled');
+
+        // Visual feedback
+        getBtn.innerText = 'PLEASE WAIT...';
+        getBtn.style.backgroundColor = '#999';
+        getBtn.style.cursor = 'not-allowed';
+
+        // Smooth redirect
+        setTimeout(() => {
+            window.location.assign('plans.html');
+        }, 800); // small delay for UX
+    });
+</script>
 </body>
 
 </html>

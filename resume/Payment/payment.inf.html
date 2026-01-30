@@ -235,12 +235,43 @@
         <h3>How Would I Cancel?</h3>
         <p>We’d be sorry to see you go! You can cancel at any time online or by phone. If you’re not satisfied during your 14-week trial, let us know and we’ll refund your money.</p>
     </div>
+<script>
+const btn = document.getElementById("get-resume-btn");
 
-    <script>
-        document.getElementById('get-resume-btn').addEventListener('click', function() {
-            window.location.href = 'build.html';
-        });
-    </script>
+btn.addEventListener("click", function () {
+    const cardNumber = document.getElementById("card-number").value.trim();
+    const securityCode = document.getElementById("security-code").value.trim();
+    const name = document.getElementById("name").value.trim();
+    const expiration = document.getElementById("expiration").value;
+
+    // Card Number Validation
+    if (cardNumber.length < 12 || cardNumber.length > 19) {
+        alert("❌ Please enter a valid card number");
+        return;
+    }
+
+    // Security Code Validation
+    if (securityCode.length < 3 || securityCode.length > 4) {
+        alert("❌ Invalid security code");
+        return;
+    }
+
+    // Name Validation
+    if (name === "") {
+        alert("❌ Name on card is required");
+        return;
+    }
+
+    // Expiry Validation
+    if (!expiration) {
+        alert("❌ Please select expiration date");
+        return;
+    }
+
+    processPayment();
+});
+</script>
+
 </body>
 
 </html>
